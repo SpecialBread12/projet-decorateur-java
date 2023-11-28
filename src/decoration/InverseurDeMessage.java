@@ -10,7 +10,6 @@ public class InverseurDeMessage extends Message{
 		this.inverser();
 	}
 
-	
 	private void inverser() {
 		StringBuilder inverseur = new StringBuilder(this.message.getText());
 		this.inversion = inverseur.reverse().toString();
@@ -20,14 +19,17 @@ public class InverseurDeMessage extends Message{
 	public String getText() {
 		return this.inversion;
 	}
+	
 	public void setText(String text) {
 		
 		this.message.setText(text);
 		this.inverser();
 	}
+	
 	public String getAuteur() {
 		return auteur;
 	}
+	
 	public void setAuteur(String auteur) {
 		this.auteur = auteur;
 	}

@@ -1,4 +1,5 @@
 import decoration.Encripteur;
+import decoration.EncripteurCaesar;
 import decoration.InverseurDeMessage;
 import decoration.Majuscule;
 import modele.Message;
@@ -26,6 +27,11 @@ public class App {
 		String alienEmojiString = new String(surrogates, 0, surrogates.length);
 		System.out.println(alienEmojiString);
 		System.out.println("\uD83D\uDC7D"); 
+		
+		
+		Message message1 = new Message("Caesar est faible");
+		EncripteurCaesar caesar = new EncripteurCaesar(message1, 10);
+		System.out.println(caesar.getText());
 	}
 
 }
