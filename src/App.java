@@ -36,8 +36,9 @@ public class App {
 		System.out.println(caesar.getText());
 		
 		Message messageAES = new Message("my password is : XD");
-		EncripteurAES aes = new EncripteurAES(messageAES.getText(), "unga");
-		System.out.println();
+		System.out.println(messageAES.getText());
+		EncripteurAES aes = new EncripteurAES(messageAES, "secretkey123");
+		System.out.println(aes.getText());
 	}
 
 }
